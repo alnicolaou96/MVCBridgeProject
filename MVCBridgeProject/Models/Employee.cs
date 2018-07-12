@@ -18,9 +18,5 @@ namespace MVCBridgeProject.Models
         public string EmergencyContactName{ get; set; }
         public string EmergencyContactNumber { get; set; }
         public string DateStarted { get; set; }
-
-        [ForeignKey("Address")]
-        public int AddressID { get; set; }
-        public virtual Address Address { get; set; }
     }
 }
