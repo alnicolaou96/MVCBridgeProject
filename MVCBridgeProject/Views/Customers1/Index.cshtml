@@ -9,61 +9,39 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Address.StreetName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CustomerName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CustomerEmail)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CustomerPhone)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FavoriteDrink)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.FavoriteMeal)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.LargestBill)
-        </th>
-        <th></th>
-    </tr>
+<div class="container">
+    <div class="row">
+        <div class="col">@Html.DisplayNameFor(model => model.Address.StreetName)</div>
+        <div class="col">@Html.DisplayNameFor(model => model.CustomerName)</div>
+        <div class="col">@Html.DisplayNameFor(model => model.CustomerEmail)</div>
+        <div class="col">@Html.DisplayNameFor(model => model.CustomerPhone)</div>
+        <div class="col">@Html.DisplayNameFor(model => model.FavoriteDrink)</div>
+        <div class="col">@Html.DisplayNameFor(model => model.FavoriteMeal)</div>
+        <div class="col">@Html.DisplayNameFor(model => model.LargestBill)</div>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Address.StreetName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CustomerName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CustomerEmail)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CustomerPhone)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FavoriteDrink)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.FavoriteMeal)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LargestBill)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CustomerID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CustomerID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CustomerID })
-        </td>
-    </tr>
-}
+    </div>
+</div>
+    <div class="container">
+        @foreach (var item in Model)
+        {
+        <div class="row">
+            <div class="col">@Html.DisplayFor(modelItem => item.Address.StreetName)</div>
+            <div class="col">@Html.DisplayFor(modelItem => item.CustomerName)</div>
+            <div class="col">@Html.DisplayFor(modelItem => item.CustomerEmail)</div>
+            <div class="col">@Html.DisplayFor(modelItem => item.CustomerPhone)</div>
+            <div class="col">@Html.DisplayFor(modelItem => item.FavoriteDrink)</div>
+            <div class="col">@Html.DisplayFor(modelItem => item.FavoriteMeal)</div>
+            <div class="col">@Html.DisplayFor(modelItem => item.LargestBill)</div>
+            <div class="col">
+                @Html.ActionLink("Edit", "Edit", new { id = item.CustomerID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.CustomerID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.CustomerID })
+            </div>
+            
+            
+        </div>
 
-</table>
+        }
+
+    </div>
+
